@@ -1,14 +1,19 @@
+<img align="left" width="140" height="140" title="arui-feather"
+     src="https://rawgit.com/alfa-laboratory/arui-feather/master/logo.svg" />
+
 Alfa Bank UI lightweight library
 ================================
 
 [![NPM version][npm-img]][npm] [![Travis Build Status][travis-img]][travis] [![AppVeyor Build Status][appveyor-img]][appveyor]
 
-[appveyor-img]: https://img.shields.io/appveyor/ci/teryaew/arui-feather.svg?label=win
+[appveyor-img]: https://img.shields.io/appveyor/ci/teryaew/arui-feather/master.svg?label=win
 [npm-img]:      https://img.shields.io/npm/v/arui-feather.svg
-[travis-img]:   https://img.shields.io/travis/alfa-laboratory/arui-feather.svg?label=unix
+[travis-img]:   https://img.shields.io/travis/alfa-laboratory/arui-feather/master.svg?label=unix
 [appveyor]:     https://ci.appveyor.com/project/teryaew/arui-feather
 [npm]:          https://www.npmjs.org/package/arui-feather
 [travis]:       https://travis-ci.org/alfa-laboratory/arui-feather?branch=master
+
+<br />
 
 Как запустить?
 --------------
@@ -79,7 +84,7 @@ npm install svgo -g
 find src -name *.svg -print0 | xargs -0 -L 1 svgo
 ```
 
-Документацая по компонентам
+Документация по компонентам
 ---------------------------
 
 Документация генерируется на основе кода библиотеки и комментариев в формате jsdoc.
