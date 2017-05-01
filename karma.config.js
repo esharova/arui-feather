@@ -94,13 +94,15 @@ module.exports = (config) => {
                 deviceName: 'Android Emulator',
                 deviceOrientation: 'portrait',
                 platformName: 'Android',
-                platformVersion: '4.4'
+                platformVersion: '4.4',
+                timeZone: 'Moscow'
             },
             sauceSafariIOS: {
                 base: 'SauceLabs',
                 browserName: 'iPhone',
                 platform: 'OS X 10.12',
-                version: '10.2'
+                version: '10.2',
+                timeZone: 'Moscow'
             }
         };
 
