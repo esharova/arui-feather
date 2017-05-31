@@ -43,7 +43,7 @@ module.exports = {
                 staticRoot: './',
                 webpackConfig: './webpack.config.gemini.js'
             },
-            sauce: {}
+            'saucelabs-info': {}
         },
         tempDir: './'
     }

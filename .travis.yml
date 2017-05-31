@@ -16,12 +16,19 @@ env:
   matrix:
     - TEST_SCOPE: lint
     - TEST_SCOPE: unit
-    # - TEST_SCOPE: gemini
+    - TEST_SCOPE: gemini
 
 install:
   - yarn install
 
+before_script:
+  - |
+      if [ "${TEST_SCOPE}" == "gemini" ]; then
+        curl -L https://gist.githubusercontent.com/teryaew/ab7c8a1c377ba0796f20a007a1d830eb/raw/sauce-connect.sh | bash
+        cat .gemini.js
+      fi
+
 script:
   - if [ "${TEST_SCOPE}" == "lint" ]; then npm run lint; fi
   - if [ "${TEST_SCOPE}" == "unit" ]; then npm run test; fi
-  # - if [ "${TEST_SCOPE}" == "gemini" ]; then npm run gemini; fi
+  - if [ "${TEST_SCOPE}" == "gemini" ]; then npm run gemini; fi
