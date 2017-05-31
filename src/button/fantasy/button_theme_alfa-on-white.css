@@ -1,0 +1,205 @@
+@import '../../vars-fantasy.css';
+
+.button_theme_alfa-on-white {
+    color: var(--color-content-alfa-on-white);
+
+    background: transparent;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .3);
+
+    &.button_hovered {
+        border-color: rgba(0, 0, 0, .9);
+    }
+
+    &.button_focused-hard {
+        border-color: rgba(0, 0, 0, .9);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .9);
+
+        &.button_hovered {
+            box-shadow: none;
+            border-color: rgba(0, 0, 0, .9);
+        }
+    }
+
+    &.button_pressed {
+        border-color: rgba(0, 0, 0, .9);
+        background: rgba(0, 0, 0, .05);
+    }
+
+    &.button_view_action {
+        color: var(--color-content-alfa-on-white);
+        background: rgba(0, 0, 0, .15);
+        border-color: rgba(0, 0, 0, .05);
+
+        &.button_hovered {
+            background: rgba(0, 0, 0, .25);
+        }
+
+        &.button_pressed {
+            background: rgba(0, 0, 0, .3);
+        }
+
+        &.button_focused-hard {
+            border-color: rgba(0, 0, 0, .9);
+
+            &.button_hovered {
+                border-color: transparent;
+            }
+        }
+    }
+
+    &.button_view_extra {
+        color: var(--color-content-accent-alfa-on-color);
+        background: var(--color-red);
+        border-color: transparent;
+
+        &.button_hovered {
+            background: var(--color-red-hovered);
+        }
+
+        &.button_pressed {
+            background: var(--color-red-pressed);
+        }
+
+        &.button_disabled {
+            color: rgba(255, 255, 255, .8);
+            background: var(--color-red-disabled);
+        }
+    }
+
+    &.button_view_other {
+        background: rgba(80, 64, 218, .85);
+        border-color: rgba(80, 64, 218, .85);
+
+        color: var(--color-content-accent-alfa-on-color);
+
+        &.button_hovered {
+            background: rgba(71, 57, 195, .85);
+            border-color: rgba(71, 57, 195, .85);
+        }
+
+        &.button_focused-hard {
+            border-color: rgba(0, 0, 0, .9);
+
+            &.button_hovered {
+                border-color: rgba(71, 57, 195, .85);
+            }
+        }
+
+        &.button_pressed {
+            background: rgba(64, 51, 174, .85);
+            border-color: rgba(64, 51, 174, .85);
+        }
+    }
+
+    &.button_pseudo {
+        border-style: dashed;
+
+        &.button_focused-hard {
+            border-color: rgba(0, 0, 0, .9);
+            border-style: solid;
+
+            &.button_hovered {
+                border-color: rgba(239, 49, 36, .5);
+                border-style: dashed;
+            }
+        }
+    }
+
+    &.button_view_tag {
+        color: var(--color-content-alfa-on-white);
+        background: rgba(0, 0, 0, .05);
+        border-color: transparent;
+        border-radius: 20px;
+
+        .button__text {
+            font-weight: 500;
+        }
+
+        &.button_hovered {
+            background: rgba(0, 0, 0, .1);
+        }
+
+        &.button_focused-hard {
+            background: rgba(0, 0, 0, .15);
+        }
+
+        &.button_pressed {
+            background: rgba(0, 0, 0, .2);
+        }
+
+        &.button_checked {
+            color: var(--color-content-alfa-on-color);
+            background: rgba(10, 30, 50, .9);
+        }
+    }
+
+    &.button_disabled {
+        border-color: transparent;
+        background: rgba(0, 0, 0, .08);
+
+        .button__text {
+            color: var(--color-content-minor-alfa-on-white);
+        }
+    }
+}
+
+.control-group {
+    .button_theme_alfa-on-white {
+        border-right-color: transparent;
+
+        .button__text {
+            font-weight: var(--font-weight);
+        }
+
+        &.button_hovered {
+            border-color: rgba(0, 0, 0, .9);
+            border-right-color: transparent;
+        }
+    }
+
+    .checkbox_theme_alfa-on-white,
+    .radio_theme_alfa-on-white {
+        & + .checkbox_disabled,
+        & + .radio_disabled {
+            .button_theme_alfa-on-white {
+                border-left-color: rgba(0, 0, 0, .3);
+            }
+        }
+
+        &.checkbox_checked + .checkbox_disabled,
+        &.radio_checked + .radio_disabled {
+            .button_theme_alfa-on-white {
+                border-left-color: transparent;
+            }
+        }
+
+        &.checkbox_hovered + .checkbox_theme_alfa-on-white,
+        &.radio_hovered + .radio_theme_alfa-on-white {
+            .button_theme_alfa-on-white {
+                border-left-color: rgba(0, 0, 0, .9);
+            }
+        }
+    }
+
+    > :last-child {
+        .button_theme_alfa-on-white {
+            border-right-color: rgba(0, 0, 0, .3);
+
+            &.button_hovered {
+                border-color: rgba(0, 0, 0, .9);
+            }
+
+            &.button_checked,
+            &.button_disabled {
+                border-right-color: transparent;
+
+                &.button_hovered {
+                    border-color: rgba(0, 0, 0, .9);
+                }
+            }
+        }
+    }
+}
