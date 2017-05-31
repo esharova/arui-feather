@@ -30,7 +30,7 @@
     }
 
     .input__clear {
-        background-image: url(./images/input__clear_color.svg);
+        background-image: url(../images/input__clear_color.svg);
     }
 
     &.input_has-icon {

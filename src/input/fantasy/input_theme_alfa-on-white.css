@@ -29,7 +29,7 @@
     }
 
     .input__clear {
-        background-image: url(./images/input__clear_white.svg);
+        background-image: url(../images/input__clear_white.svg);
     }
 
     &.input_has-icon .input__icon {
